@@ -85,4 +85,4 @@ jobs:
             fi
 
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/bab-e-deuk
-            sudo docker run --name ${{ secrets.DOCKER_USERNAME }}/bab-e-deuk -d -p 80:8080 -e TZ=Asia/Seoul ${{ env.DOCKER_HUB }}
+            sudo docker run --name ${{ secrets.DOCKER_USERNAME }}/bab-e-deuk -d -p 8080:8080 -e TZ=Asia/Seoul ${{ secrets.DOCKER_USERNAME }}
