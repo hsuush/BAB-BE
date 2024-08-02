@@ -62,7 +62,7 @@ jobs:
           tags: ${{secrets.DOCKERHUB_USERNAME}}/bab-e-deuk
           labels: ${{steps.meta.outputs.labels}}
 
-  deploy-to-ec2:
+  run-docker-image-on-ec2:
     needs: build
     runs-on: ubuntu-latest
 
