@@ -63,8 +63,7 @@ jobs:
           labels: ${{steps.meta.outputs.labels}}
 
   deploy-to-ec2:
-
-    needs: build-and-push-docker
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
