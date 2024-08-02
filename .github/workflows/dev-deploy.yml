@@ -85,4 +85,4 @@ jobs:
             fi
 
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/bab-e-deuk
-            docker-compose up -d
+            sudo docker run -dp 8080:8080 ${{ secrets.DOCKER_USERNAME}}/bab-e-deuk:latest
