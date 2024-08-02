@@ -19,13 +19,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           token: ${{secrets.ACTION_TOKEN}}
-
-      # 서브 모듈 변경 점 있으면 update
-      - name: Git Submodule Update
-        run: |
-          git submodule update --remote --recursive
 
       # jdk 설치
       - name: Set up JDK 17
