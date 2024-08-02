@@ -7,7 +7,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{github.repository}}
-  EC2_SSH_USER : ec2-user
+  EC2_SSH_USER : ubuntu
   EC2_HOST : ${{ secrets.EC2_HOST}}
   EC2_PRIVATE_KEY : ${{ secrets.EC2_SSH_PRIVATE_KEY}}
 
