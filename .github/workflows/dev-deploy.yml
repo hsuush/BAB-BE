@@ -62,11 +62,14 @@ jobs:
           tags: ${{secrets.DOCKERHUB_USERNAME}}/bab-e-deuk
           labels: ${{steps.meta.outputs.labels}}
 
-  run-docker-image-on-ec2:
-    needs: build-and-push-docker
+  deploy:
+    needs: build-and-push-image
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Deploy to EC2
         uses: appleboy/ssh-action@master
         with:
