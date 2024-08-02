@@ -63,7 +63,7 @@ jobs:
           labels: ${{steps.meta.outputs.labels}}
 
   run-docker-image-on-ec2:
-    needs: build
+    needs: build-and-push-docker
     runs-on: ubuntu-latest
 
     steps:
