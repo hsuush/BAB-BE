@@ -16,10 +16,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{secrets.ACTION_TOKEN}}
 
       # jdk 설치
       - name: Set up JDK 17
@@ -30,9 +26,9 @@ jobs:
 
       #서브 모듈 접근
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PERSONAL_TOKEN }}
+          token: ${{ secrets.ACTION_TOKEN }}
           submodules: true
 
       # 서브 모듈 변경 점 있으면 update
