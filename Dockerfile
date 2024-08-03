@@ -4,5 +4,5 @@ WORKDIR /usr/src/app
 
 COPY build/libs/demo-0.0.1-SNAPSHOT.jar bab-snapshot.jar
 
-ENTRYPOINT ["java", "-jar", "bab-snapshot.jar","0.0.0.0:8080" ]
+ENTRYPOINT ["java", "-jar", "bab-snapshot.jar"]
 
