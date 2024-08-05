@@ -34,4 +34,17 @@ public class OwnerController {
         OwnerResponseDto.LoginOrRegisterDto response = ownerService.registerOrLogin(request);
         return ApiResponse.of(response.getSuccessStatus(), response);
     }
+    @PostMapping("/test")
+    @Operation(summary = "사장 카카오 소셜 로그인 및 회원가입",
+            description = "test용")
+    @ApiResponses(value = {
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "200", description = "COMMON200: 사장 로그인 성공"),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "201", description = "COMMON201: 사장 회원가입 성공"),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "400", description = "GLOBAL402: 카카오 토큰관련 서버 에러"),
+            @io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "500", description = "GLOBAL401: 서버 에러")})
+    public ApiResponse<?> test(@RequestBody OwnerRequestDto.LoginOrRegisterDto request){
+        OwnerResponseDto.LoginOrRegisterDto response = ownerService.registerOrLogin(request);
+        return ApiResponse.of(response.getSuccessStatus(), response);
+    }
+
 }
