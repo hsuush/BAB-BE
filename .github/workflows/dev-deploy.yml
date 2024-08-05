@@ -87,4 +87,4 @@ jobs:
             fi
 
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/bab-e-deuk
-            sudo docker run -dp 8080:8080 --name babedeuck ${{ secrets.DOCKER_USERNAME}}/bab-e-deuk:latest
+            sudo docker run -dp 8080:8080 --name babedeuck ${{ secrets.DOCKER_USERNAME }}/bab-e-deuk:latest
